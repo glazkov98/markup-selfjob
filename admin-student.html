@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- МЕТА -->
+    <title>Self Job</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- STYLES -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <!-- BEGIN HEADER -->
+    <header class="header admin">
+        <div class="container">
+            <a href="#" class="header-logo">
+                <img src="assets/images/logo.png" class="header-logo-img" alt="SelfJob">
+            </a>
+            <nav class="header-menu admin">
+                <a href="#" class="header-menu-link">Кураторы</a>
+                <a href="#" class="header-menu-link active">Студенты</a>
+                <a href="#" class="header-menu-link">Учебные заведения</a>
+                <a href="#" class="header-menu-link">Населеные пункты</a>
+                <a href="#" class="header-menu-link">Администраторы</a>
+            </nav>
+        </div>
+    </header>
+
+    <header class="header-mobile">
+        <div class="header-mobile-row">
+            <button class="header-mobile-btn-menu js-toggle-mobile-menu"></button>
+            <a href="#" class="header-mobile-logo">
+                <img src="assets/images/logo.png" class="header-mobile-logo-img" alt="SelfJob">
+            </a>
+        </div>
+        <div class="header-mobile-menu-container">
+            <nav class="header-mobile-menu">
+                <a href="#" class="header-mobile-menu-link active">Кураторы</a>
+                <a href="#" class="header-mobile-menu-link">Студенты</a>
+                <a href="#" class="header-mobile-menu-link">Учебные заведения</a>
+                <a href="#" class="header-mobile-menu-link">Населенные пункты</a>
+                <a href="#" class="header-mobile-menu-link">Администраторы</a>
+            </nav>
+        </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- BEGIN ADMIN STUDENT -->
+    <div class="admin-student">
+        <div class="container">
+            <a href="#" class="btn-back admin">Назад</a>
+            <section class="admin-student-student-info">
+                <h1 class="page-title admin-student-title icon-1">Сведения о студенте</h1>
+                <div class="table-responsive">
+                    <table class="table admin-student-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Имя</th>
+                                <th scope="col">E-mail</th>
+                                <th scope="col">Телефон</th>
+                                <th scope="col">Учебное заведение</th>
+                                <th scope="col">Город</th>
+                                <th scope="col">Дата регистрации</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Иванов Иван</td>
+                                <td>ivanov@gmail.com</td>
+                                <td>+7 950 088 88 88</td>
+                                <td>Всероссийский научно-исследовательский институт пивоваренной, безалкогольной и винодельческой промышленности</td>
+                                <td>Петропавловск-Камчатский </td>
+                                <td>12.12.2020</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="admin-student-text-row">
+                    <p class="admin-student-text">Куратор: <span class="admin-student-code">Матюшина Валентина</span></p>
+                    <button class="admin-student-text-btn-edit" data-bs-toggle="modal" data-bs-target="#change-curator"></button>
+                </div>
+            </section>
+            <section class="admin-student-orders-info">
+                <h2 class="page-title admin-student-title icon-2">Сведения о заказах</h2>
+                <div class="table-responsive">
+                <table class="table admin-student-orders-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Наименование работ</th>
+                            <th scope="col">Заказчик</th>
+                            <th scope="col"><a href="#" class="table-btn-filter">Дата выполнения</a></th>
+                            <th scope="col"><a href="#" class="table-btn-filter">Сумма, руб.</a></th>
+                            <th scope="col"><a href="#" class="table-btn-filter">Дельта стоимости заказа</a></th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Разработка баннера для VK, инстаграм и фейсбук</td>
+                            <td>ИП Потапов</td>
+                            <td>12.06.2021</td>
+                            <td class="cost">2 500</td>
+                            <td>+500</td>
+                            <td><a href="#" class="dashboard-orders-table-btn-more"></a></td>
+                        </tr>
+                        <tr>
+                            <td>Макет для сайта в PSD</td>
+                            <td>ИП Воронов</td>
+                            <td>08.06.2021</td>
+                            <td class="cost">12 500</td>
+                            <td>+800</td>
+                            <td><a href="#" class="dashboard-orders-table-btn-more"></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <a href="#" class="btn btn-success admin-export-btn">Экспорт в Excel</a>
+            </section>
+        </div>
+    </div>
+    <!-- END ADMIN STUDENT -->
+
+
+    <!-- BEGIN MODAL -->
+    <div class="modal-container" data-modal="change-password">
+        <div class="modal-block">
+            <button type="button" class="modal-close js-modal-close"></button>
+            <h3 class="modal-caption">Смена пароля</h3>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label for="input-modal-password-new" class="form-label">Новый пароль <button type="button" class="auth-form-clue" data-bs-toggle="tooltip" data-bs-placement="right" title="Содержит не менее 5 символов (букв и цифр)"></button></label>
+                    <div class="input-wrapper js-password-group">
+                        <input type="password" name="password_new" id="input-modal-password-new" class="form-control input-password js-input-password" required>
+                        <button type="button" class="password-toggle-btn js-password-toggle"></button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="input-modal-password-return" class="form-label">Повторите пароль</label>
+                    <div class="input-wrapper js-password-group">
+                        <input type="password" name="password_return" id="input-modal-password-return" class="form-control input-password js-input-password" required>
+                        <button type="button" class="password-toggle-btn js-password-toggle"></button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" name="send" class="btn btn-primary auth-form-submit">Изменить пароль</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal fade" id="delete-modal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Подтверждение</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Вы действительно хотите удалить данные?</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-primary">Удалить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="change-curator" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Смена куратора</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" name="new_code" class="modal-input-new-code" placeholder="Новый код приглашения:">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                    <button type="button" class="btn btn-primary">Сохранить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-container" data-modal="forgot">
+        <div class="modal-block">
+            <button type="button" class="modal-close js-modal-close"></button>
+            <h3 class="modal-caption">Забыли пароль?</h3>
+            <p class="modal-text">Введите адрес электронной почты, который вы использовали при регистрации, и мы пришлем вам инструкции по изменению пароля.</p>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label for="input-email-modal" class="form-label">E-mail</label>
+                    <input type="email" name="email" id="input-email-modal" class="form-control input-email" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" name="send" class="btn btn-primary auth-form-submit">Восстановить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-container" data-modal="education">
+        <div class="modal-block">
+            <button type="button" class="modal-close js-modal-close"></button>
+            <h3 class="modal-caption">Выберите учебное заведение</h3>
+            <form class="modal-form">
+                <div class="form-group">
+                    <input type="text" name="search_education" id="input-education-modal" class="form-control input-education" placeholder="Ваше учебное заведение">
+                </div>
+            </form>
+            <div class="modal-education-list">
+                <p class="modal-education-list-item js-textarea-education-set">Казанский техникум информационных технологий и связи</p>
+                <p class="modal-education-list-item js-textarea-education-set">Иркутский техникум информационных технологий</p>
+                <p class="modal-education-list-item js-textarea-education-set">Самарский техникум информационных технологий</p>
+                <p class="modal-education-list-item js-textarea-education-set">Красноярский техникум информационных технологий</p>
+                <p class="modal-education-list-item js-textarea-education-set">Новосибирский техникум</p>
+            </div>
+        </div>
+    </div>
+    <!-- END MODAL -->
+
+    <!-- BEGIN SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
+    <script src="https://unpkg.com/imask" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <!-- END SCRIPTS -->
+
+</body>
+</html>

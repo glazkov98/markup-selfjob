@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- МЕТА -->
+    <title>Self Job</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- STYLES -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <!-- BEGIN HEADER -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="header-logo">
+                <img src="assets/images/logo.png" class="header-logo-img" alt="SelfJob">
+            </a>
+            <nav class="header-menu">
+                <a href="#" class="header-menu-link active">Мои заказы</a>
+            </nav>
+            <a href="#" class="header-profile">
+                <span class="header-profile-name">Вахтангов Г.</span>
+                <span class="header-profile-icon student"></span>
+            </a>
+        </div>
+    </header>
+    <!-- END HEADER -->
+
+    <!-- BEGIN ORDER -->
+    <div class="order">
+        <div class="container">
+            <a href="#" class="btn-back">Назад</a>
+            <h1 class="page-title">Новый заказ</h1>
+            <form action="#" class="order-form" method="POST">
+                <div class="form-group">
+                    <label for="input-order-name" class="form-label">Название заказа</label>
+                    <input type="text" name="order_name" id="input-order-name" class="form-control input-order-name" value="Разработка баннера для VK" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-customer" class="form-label">Заказчик</label>
+                    <input type="text" name="customer" id="input-customer" class="form-control input-customer" value="ИП Потапов" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-date" class="form-label">Дата выполнения</label>
+                    <input type="text" name="date" id="input-date" class="form-control input-date" value="12.06.2021" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-work" class="form-label">Планируемая работа</label>
+                    <textarea name="work" id="input-work" class="form-control input-work" rows="4" required>Оформление для сообществ, которые хотят выделяться от других своим стилем и удобством для пользователя. Адаптация под моб. устройства - статичная картинка.</textarea>
+                    <button type="button" class="order-form-clipboard-btn btn-clipboard js-input-clipboard"></button>
+                </div>
+                <div class="form-group">
+                    <label for="input-cost" class="form-label">Планируемая сумма заказа, руб.</label>
+                    <input type="text" name="cost" id="input-cost" class="form-control input-cost" value="1500" required>
+                    <button type="button" class="order-form-clipboard-btn btn-clipboard js-input-clipboard"></button>
+                </div>
+                <div class="form-group">
+                    <label for="input-work-fact" class="form-label">Фактическая работа</label>
+                    <textarea name="work_fact" id="input-work-fact" class="form-control input-work-fact" rows="4" required>Разработка баннера для VK</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="input-cost-fact" class="form-label">Фактическая сумма заказа, руб.</label>
+                    <input type="text" name="cost_fact" id="input-cost-fact" class="form-control input-cost-fact" value="2500" required>
+                </div>
+                <div class="form-group order-form-buttons">
+                    <button type="submit" name="send" class="btn btn-primary order-form-submit">Сохранить</button>
+                    <a href="#" class="order-form-cancel">Отмена</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- END ORDER -->
+
+
+    <!-- BEGIN MODAL -->
+    <div class="modal-container" data-modal="forgot">
+        <div class="modal-block">
+            <button type="button" class="modal-close js-modal-close"></button>
+            <h3 class="modal-caption">Забыли пароль?</h3>
+            <p class="modal-text">Введите адрес электронной почты, который вы использовали при регистрации, и мы пришлем вам инструкции по изменению пароля.</p>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label for="input-email-modal" class="form-label">E-mail</label>
+                    <input type="email" name="email" id="input-email-modal" class="form-control input-email" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" name="send" class="btn btn-primary auth-form-submit">Восстановить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-container" data-modal="education">
+        <div class="modal-block">
+            <button type="button" class="modal-close js-modal-close"></button>
+            <h3 class="modal-caption">Выберите учебное заведение</h3>
+            <form class="modal-form">
+                <div class="form-group">
+                    <input type="text" name="search_education" id="input-education-modal" class="form-control input-education" placeholder="Ваше учебное заведение">
+                </div>
+            </form>
+            <div class="modal-education-list">
+                <p class="modal-education-list-item js-textarea-education-set">Казанский техникум информационных технологий и связи</p>
+                <p class="modal-education-list-item js-textarea-education-set">Иркутский техникум информационных технологий</p>
+                <p class="modal-education-list-item js-textarea-education-set">Самарский техникум информационных технологий</p>
+                <p class="modal-education-list-item js-textarea-education-set">Красноярский техникум информационных технологий</p>
+                <p class="modal-education-list-item js-textarea-education-set">Новосибирский техникум</p>
+            </div>
+        </div>
+    </div>
+
+    <p class="success-clipboard-alert">Код скопирован с буфер обмена</p>
+    <!-- END MODAL -->
+
+    <!-- BEGIN SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
+    <script src="https://unpkg.com/imask" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <!-- END SCRIPTS -->
+
+</body>
+</html>

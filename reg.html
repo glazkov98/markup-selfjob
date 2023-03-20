@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <!-- МЕТА -->
+    <title>Self Job</title>
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- STYLES -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <div class="auth-page-container">
+        <div class="auth-block active" data-block="register">
+            <img src="assets/images/auth-logo.png" class="auth-block-logo" alt="SelfJob">
+            <form class="auth-form" action="" method="POST">
+                <div class="form-group">
+                    <div class="auth-form-tabs">
+                        <div class="auth-form-tabs-btn">
+                            <input type="radio" name="type" id="checkbox-student" class="auth-form-tabs-btn-checkbox js-auth-form-checkbox" data-block="registration-student" data-index="0" value="student" checked>
+                            <label for="checkbox-student" class="auth-form-tabs-btn-label">Студент</label>
+                        </div>
+                        <div class="auth-form-tabs-btn">
+                            <input type="radio" name="type" id="checkbox-curator" class="auth-form-tabs-btn-checkbox js-auth-form-checkbox" data-block="registration-curator" data-index="1" value="curator">
+                            <label for="checkbox-curator" class="auth-form-tabs-btn-label">Куратор</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="auth-form-tabs-content active" data-index="0">
+                        <label for="input-code" class="form-label">Код приглашения</label>
+                        <input type="text" name="code" class="form-control input-code" id="input-code" required>
+                    </div>
+                    <div class="auth-form-tabs-content" data-index="1">
+                        <label for="input-email" class="form-label">Email</label>
+                        <input type="email" name="email" id="input-email" class="form-control input-email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary auth-form-submit js-validate-input js-change-block" data-block="registration-student">Создать аккаунт</button>
+                </div>
+            </form>
+            <div class="auth-block-footer">
+                <p class="auth-block-footer-text">Уже зарегистрированы?</p>
+                <a href="#" class="btn-link auth-block-footer-link">Войти</a>
+            </div>
+        </div>
+        <div class="auth-block auth-block-registration" data-block="registration-student">
+            <img src="assets/images/auth-logo.png" class="auth-block-logo" alt="SelfJob">
+            <p class="auth-block-title">Для завершения регистрации заполните личные данные</p>
+            <form class="auth-form" action="" method="POST">
+                <div class="form-group">
+                    <label for="input-firstname-1" class="form-label">Имя</label>
+                    <input type="text" name="firstname" id="input-firstname-1" class="form-control input-firstname" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-lastname" class="form-label">Фамилия</label>
+                    <input type="text" name="lastname" id="input-lastname" class="form-control input-lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-email-2" class="form-label">Email</label>
+                    <input type="email" name="email" id="input-email-2" class="form-control input-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-phone-1" class="form-label">Телефон</label>
+                    <input type="text" name="phone" id="input-phone-1" class="form-control input-phone js-phone-mask" placeholder="+7" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Учебное заведение</label>
+                    <textarea name="education" class="form-control textarea-education" readonly disabled>Казанский техникум информационных технологий и связи</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="input-password-1" class="form-label">Пароль <button type="button" class="auth-form-clue" data-bs-toggle="tooltip" data-bs-placement="right" title="Содержит не менее 5 символов (букв и цифр)"></button></label>
+                    <div class="input-wrapper js-password-group">
+                        <input type="password" name="password" id="input-password-1" class="form-control input-password js-input-password" required>
+                        <button type="button" class="password-toggle-btn js-password-toggle"></button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" name="send" class="btn btn-primary auth-form-submit">Сохранить</button>
+                </div>
+            </form>
+        </div>
+        <div class="auth-block auth-block-registration" data-block="registration-curator">
+            <img src="assets/images/auth-logo.png" class="auth-block-logo" alt="SelfJob">
+            <p class="auth-block-title">Для завершения регистрации заполните личные данные</p>
+            <form class="auth-form" action="" method="POST">
+                <div class="form-group">
+                    <label for="input-firstname" class="form-label">Имя</label>
+                    <input type="text" name="firstname" id="input-firstname" class="form-control input-firstname" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-lastname" class="form-label">Фамилия</label>
+                    <input type="text" name="lastname" id="input-lastname" class="form-control input-lastname" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-email" class="form-label">Email</label>
+                    <input type="email" name="email" id="input-email" class="form-control input-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="input-phone" class="form-label">Телефон</label>
+                    <input type="text" name="phone" id="input-phone" class="form-control input-phone js-phone-mask" placeholder="+7" required>
+                </div>
+                <div class="form-group">
+                    <label for="textarea-education" class="form-label">Учебное заведение</label>
+                    <textarea name="education" id="textarea-education" class="form-control textarea-education js-modal-open" data-modal="education" readonly>Казанский техникум информационных технологий и связи</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="input-password" class="form-label">Пароль <button type="button" class="auth-form-clue" data-bs-toggle="tooltip" data-bs-placement="right" title="Содержит не менее 5 символов (букв и цифр)"></button></label>
+                    <div class="input-wrapper js-password-group">
+                        <input type="password" name="password" id="input-password" class="form-control input-password js-input-password" required>
+                        <button type="button" class="password-toggle-btn js-password-toggle"></button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button type="submit" name="send" class="btn btn-primary auth-form-submit">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- BEGIN MODAL -->
+    <div class="modal-container" data-modal="forgot">
+        <div class="modal-block">
+            <button type="button" class="modal-close js-modal-close"></button>
+            <h3 class="modal-caption">Забыли пароль?</h3>
+            <p class="modal-text">Введите адрес электронной почты, который вы использовали при регистрации, и мы пришлем вам инструкции по изменению пароля.</p>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label for="input-email-modal" class="form-label">E-mail</label>
+                    <input type="email" name="email" id="input-email-modal" class="form-control input-email" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit" name="send" class="btn btn-primary auth-form-submit">Восстановить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal-container" data-modal="education">
+        <div class="modal-block">
+            <button type="button" class="modal-close js-modal-close"></button>
+            <h3 class="modal-caption">Выберите учебное заведение</h3>
+            <form class="modal-form">
+                <div class="form-group">
+                    <input type="text" name="search_education" id="input-education-modal" class="form-control input-education" placeholder="Ваше учебное заведение">
+                </div>
+            </form>
+            <div class="modal-education-list">
+                <p class="modal-education-list-item js-textarea-education-set">Казанский техникум информационных технологий и связи</p>
+                <p class="modal-education-list-item js-textarea-education-set">Иркутский техникум информационных технологий</p>
+                <p class="modal-education-list-item js-textarea-education-set">Самарский техникум информационных технологий</p>
+                <p class="modal-education-list-item js-textarea-education-set">Красноярский техникум информационных технологий</p>
+                <p class="modal-education-list-item js-textarea-education-set">Новосибирский техникум</p>
+            </div>
+        </div>
+    </div>
+    <!-- END MODAL -->
+
+    <!-- BEGIN SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous" defer></script>
+    <script src="https://unpkg.com/imask" defer></script>
+    <script src="assets/js/main.js" defer></script>
+    <!-- END SCRIPTS -->
+
+</body>
+</html>
